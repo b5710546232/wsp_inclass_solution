@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1>Register</h1>
+<form action="{%url 'user:register'%}" method="POST">
+    {%csrf_token%}
+    {% include 'user/form_template.html' %}
+    <button>enter</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>Login</title>
+</head>
+<body>
+ <h1>Login</h1>
+   <form action="{% url 'login:login_user' %}" method="post">
+       {% csrf_token %}
+    Username:<br>
+    <input type="text" name="username"><br>
+    Password:<br>
+    <input type="text" name="password"><br>
+    <input type="submit" value="Login">
+  </form>
+ <a href="{% url 'login:register_view' %}"><button>register</button></a>
+</body>
+</html>
